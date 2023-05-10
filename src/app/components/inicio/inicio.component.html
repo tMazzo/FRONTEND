@@ -1,0 +1,73 @@
+<div class="background">
+    <div class="">
+        
+        <div class="columna"  *ngFor="let Perfil of perfil" >
+            <div class="cards card-one">
+                <div class="Informacion">
+                    <img src="../../../assets/images/fotoPerfil.jpg" class="img-fluid">
+                    <h6> {{Perfil.nombreP}} {{Perfil.apellidoP}}</h6>
+                    <p id="arroba">@{{Perfil.apodoP}}</p>
+                </div>
+                <div class="titulos">
+                    <div class="titulos" *ngFor="let t of titulo">
+                        <p><i class="fa-solid fa-circle circle"> </i>{{ t.nombreT }}</p>
+                    </div>
+                </div>
+            </div>
+            <button *ngIf="isLogged" class="btn btn-light" routerLink="/editperfil/{{Perfil.id}}"><i class="fa-solid fa-pen-to-square"></i> EDITAR PERFIL</button>
+        </div>
+
+        <div class="columna" *ngFor="let Contacto of contacto" >
+            <div class="cards card-two">
+                <div class="social">
+                    <h5>Redes sociales</h5>
+                    <nav>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/tomas-mazzo-029839253/" target="_blank">
+                                <i class="fab fa-linkedin" tabindex="0"></i>
+                            </a>
+                            </li>
+                            <li><a href="https://github.com/sirMazo" target="_blank">
+                                <i class="fab fa-github" tabindex="0"></i>
+                            </a>
+                            </li>
+                            <li><a href="https://twitter.com/SirMaso1" target="_blank">
+                                <i class="fab fa-twitter" tabindex="0"></i>
+                            </a>
+                            </li>
+                                <li><a href="https://instagram.com/sir.mazo?igshid=NTA5ZTk1NTc=" target="_blank">
+                                <i class="fab fa-instagram" tabindex="0"></i>
+                            </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="contacto" >
+                    <h5>Contacto</h5>
+                    <ul>
+                        <li>
+                            <strong>Teléfono</strong>
+                            {{Contacto.telefonoC}}
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            {{Contacto.emailC}}
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            <a href=" " class="enlace">www.estaweb.com</a>
+
+                        </li>
+                    </ul>
+                </div>
+                <button>
+                    Descargar CV <i class="fa-solid fa-download"></i> 
+                    <span class="overlay"></span>
+                </button>
+            </div>
+            <button *ngIf="isLogged" class="btn btn-light" routerLink="/editcontacto/{{Contacto.id}}"><i class="fa-solid fa-pen-to-square"></i> EDITAR ZONA DE CONTACTO</button>
+
+        </div>
+    </div>
+</div>

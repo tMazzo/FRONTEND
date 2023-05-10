@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+                <h2>CONTACTO</h2>
+                <div class="form-group">
+                    <label for="nombreS">Nombre de la skill</label>
+                    <input type="text" class="form-control" id="nombreS" name="nombreS" [(ngModel)]="nombreS" required>
+                </div>
+                <div class="form-group">
+                    <label for="porcentajeS">Porcentaje (solo numero )</label>
+                    <input type="text" class="form-control" id="porcentajeS" name="porcentajeS" [(ngModel)]="porcentajeS" required>
+                </div>
+                <div class="form-group">
+                    <label for="colorS">Color del porcentaje (ejemplo: #ffffff)</label>
+                    <input type="text" class="form-control" id="colorS" name="colorS" [(ngModel)]="colorS" required>
+                </div>
+                
+                <button class="btn btn-success btn-finish">Añadir Skills</button>
+                <button class="btn btn-danger btn-finish" (click)="cancelar()">Cancelar</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,52 @@
+<section id="curriculum">
+  <div class="columna">
+    <div class="col">
+      <h3>Historial Académico</h3>
+      <div class="card">
+  
+        <!-- ItemEst 1 -->
+        <div class="timeline-item" *ngFor="let Educacion of educacion" >
+          <div class="circle-doc"></div>
+          <h4><i class="fa fa-calendar"></i> {{Educacion.anioE}}</h4>
+          <h5>{{Educacion.nombreE}}</h5>
+          <h6>{{Educacion.localidadE}}</h6>
+          <p>{{Educacion.descripcionE}}</p>
+  
+          <div *ngIf="isLogged">
+            <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}"><i class="fa-solid fa-pen-to-square"></i> EDITAR</button>
+  
+            <button class="btn btn-danger" (click)="delete(Educacion.id, 'edu')"><i class="fa-solid fa-trash fa-sm"></i> BORRAR</button>
+          </div>
+        </div>
+      
+      </div>
+  
+      <button type="button" class="btn btn-light" routerLink="/nuevaedu" *ngIf="isLogged">Agregar educación</button>
+    </div>
+  
+      <div class="col">
+        <h3>Experiencia laboral</h3>
+        <div class="card">  
+  
+          <!-- ItemExp 1 -->
+          <div class="timeline-item" *ngFor="let Experiencia of expe" >
+            <div class="circle-doc"></div>
+            <h4><i class="fa fa-calendar"></i> {{Experiencia.anioE}}</h4>
+            <h5>{{Experiencia.nombreE}}</h5>
+            <h6>{{Experiencia.localidadE}}</h6>
+            <p>{{Experiencia.descripcionE}}</p>
+            
+            <div *ngIf="isLogged">
+              <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}"><i class="fa-solid fa-pen-to-square"></i> EDITAR</button> 
+              <button type="button" class="btn btn-danger" (click)="delete(Experiencia.id, 'exp')"><i class="fa-solid fa-trash fa-sm"></i> BORRAR</button>
+            </div>
+
+
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-light" routerLink="/nuevaexp" *ngIf="isLogged">Agregar Experiencia laboral</button>
+      
+      </div>
+  </div>
+  </section>

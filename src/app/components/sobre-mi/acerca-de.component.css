@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    font-family: 'Oswald', sans-serif;
+}
+
+/* ACERCA DE MI */
+
+.acercaDe{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.col{
+ padding: 0px 105px;
+}
+
+.acercaDe .contenido-acercaDe{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contenido-acercaDe h2{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.acercaDe .contenido-acercaDe p {
+    font: 30px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.acercaDe .contenido-acercaDe p span {
+    color: #ffd900;
+    font-weight: bold;
+}

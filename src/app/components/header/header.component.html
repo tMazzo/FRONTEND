@@ -1,0 +1,141 @@
+<nav [ngClass]="{'navbar-scroll': isNavbarFixed, 'navbar-fixed-top': !isNavbarFixed}" class="navbar" #navbar>
+  <div class="container-fluid">
+
+    <!-- LOGO -->
+    <a class="navbar-brand" href="#">
+      <img src="../../../../assets/images/APLogo.png" alt="Logo de Argentina Programa" class="logoAP">
+    </a>
+    
+    <!-- 4 OPCIONES -->
+      <ul class="navbar-nav flex-row primer">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#acercaDe">Sobre mí</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#curriculum">Curriculum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portafolio">Portafolio</a>
+        </li>
+      </ul>
+    
+    <!-- BOTÓN RESPONSIVE -->
+    <button class="navbar-toggler ms-auto me-2 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- BOTON LOGIN -->
+    <div *ngIf="!isLogged">
+      <button type="button" class="btn login primer" data-bs-toggle="offcanvas" data-bs-target="#loginOffcanvas">
+        Iniciar sesión
+      </button>
+    </div>
+    <div *ngIf="isLogged">
+      <button type="button" class="btn login primer" (click)="onLogOut()">
+        Cerrar sesión
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- OFFCANVAS DEL LOGIN -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="loginOffcanvas" aria-labelledby="loginOffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="loginOffcanvasLabel">Iniciar sesión</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
+  <!-- OFFCANVAS BODY -->
+  <div *ngIf="!isLogged" class="offcanvas-body">
+
+
+    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+      <div class="mb-3">
+        <label for="nombreUsuario" class="form-label">Usurario</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+          <input type="email" class="form-control" id="nombreUsuario" name="nombreUsuario" placeholder="Example123" [(ngModel)]="nombreUsuario" required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-lock"></i></span>
+          <input type="password" class="form-control" id="password" name="password" placeholder="********" [(ngModel)]="password" required>
+        </div>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Recordarme
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary w-100 mb-3">Iniciar sesión</button>
+      <!--<a href="#" class="btn btn-outline-secondary w-100 mb-3">Olvidé mi contraseña</a> -->
+    </form>
+
+
+  </div>
+  <div *ngIf="isLogged" class="offcanvas-body">
+    <label for="nombreUsuario" class="form-label">Sesión iniciada correctamente!</label>
+    <button class="btn btn-danger w-100 mb-3 text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar" (click)="onLogOut()">Cerrar sesión</button>
+
+  </div>
+
+</div>
+
+
+
+<!-- OFFCANVAS QUE GENERA EL BOTON RESPONSIVE -->
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+
+  <!-- OFFCANVAS HEADER -->
+  <div class="offcanvas-header">
+    <a class="navbar-brand" href="#">
+    <img src="../../../../assets/images/APLogo.png" alt="Logo de Argentina Programa" class="logoAP">
+  </a>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <!-- OFFCANVAS BODY -->
+  <div class="offcanvas-body">
+    <div class="justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#acercaDe">Sobre mí</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#curriculum">Curriculum</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portafolio">Portafolio</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- OFFCANVAS FOOTER-->
+  <div class="offcanvas-footer">
+    <!-- BOTON LOGIN -->
+    <div *ngIf="!isLogged">
+      <button type="button" class="btn login" data-bs-toggle="offcanvas" data-bs-target="#loginOffcanvas">
+        Iniciar sesión
+      </button>
+    </div>
+    <div *ngIf="isLogged">
+      <button type="button" class="btn login" (click)="onLogOut()">
+        Cerrar sesión
+      </button>
+    </div>
+
+  </div>
+</div>
+

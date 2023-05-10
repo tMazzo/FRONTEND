@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+    font-family: 'Oswald', sans-serif;
+    color: #fff; 
+}
+
+
+footer {
+    background-color: #1e2326;
+    color: #fff;
+    padding: 40px 0;
+  }
+
+  .copy{
+    margin-top: 80px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .copy span {
+    color: #ffd900;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .col-sm-6 {
+    width: 50%;
+  }
+
+  i {
+    color: #ffd900;
+  }
+  h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  .social ul {
+    list-style-type: none;
+    display: inline-flex;
+    align-items: center;
+
+}
+  .social li {
+    color: #ffd900;
+    padding:  0px 5px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+    
+.social h4{
+    margin-top: 40px;
+}
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #ffd900;
+    color: #1e2326;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #fff;
+    color: #1e2326;
+  }
+
+/* STYLES ÍCONOS */
+.fa-github,
+.fa-instagram,
+.fa-twitter,
+.fa-linkedin {
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.fa-linkedin:hover,
+.fa-linkedin:focus,
+.fa-twitter:hover,
+.fa-twitter:focus,
+.fa-instagram:hover,
+.fa-instagram:focus,
+.fa-github:hover,
+.fa-github:focus {
+  color: #ffd900;
+  transform: scale(1.1);
+}

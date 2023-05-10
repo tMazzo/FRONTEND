@@ -1,0 +1,20 @@
+<div class="container" *ngIf="sobreMi">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+                <h2>SOBRE MÍ</h2>
+                <div class="form-group">
+                    <label for="textoSM">Texto sobre mí</label>
+                    <textarea class="form-control" id="textoSM" name="textoSM" rows="3" placeholder="Ingrese el texto aquí.." [(ngModel)]="sobreMi.textoSM"></textarea>
+                </div>
+                
+                <button class="btn btn-success btn-finish">Actualizar texto</button>
+                <button class="btn btn-danger btn-finish" (click)="cancelar()">Cancelar</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+

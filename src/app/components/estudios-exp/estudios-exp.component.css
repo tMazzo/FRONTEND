@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+*{
+
+  font-family: 'Oswald', sans-serif;
+
+}
+
+h3{
+  font-size: 38px;
+  padding-top: 70px;
+  text-align: center;
+}
+
+.columna{
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
+  display: inline-flex;  
+}
+
+.card{
+  padding: 35px 15px;
+  width:98%;
+  border-radius: 10px;
+  background: #252A2E;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+}
+
+.timeline-item {
+  padding-bottom: 30px;
+  padding-left: 30px;
+  width: 100%;
+  position: relative;
+}
+.timeline-item:last-child{
+  padding-bottom: 0;
+}
+.timeline-item:before{
+  content: ' ';
+  width: 1px;
+  position: absolute;
+  height: 100%;
+  left: 7px;
+  top: 10px;
+  background-color: #ffd900;
+}
+
+.card .circle-doc{
+  position: absolute;
+  left: 0;
+  top: 9px;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+background-color: #ffd900;
+}
+
+button.btn:first-child {
+  margin-right: 10px;
+}
+
+h4{
+
+  margin-bottom: 12px;
+  color: #fff;
+}
+h5{
+  color:#ffd900
+}
+h6{
+  font: bold;
+  font: italic;
+}
+
+.alert {
+  position: relative;
+  padding: 1rem 1rem 1rem 3rem;
+  border-radius: 0.25rem;
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  margin-top: 1rem;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+@media screen and (max-width: 700px){
+  .columna{
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    display:block;
+  }
+}

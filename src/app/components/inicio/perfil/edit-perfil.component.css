@@ -1,0 +1,23 @@
+.container {
+    background-color: #1e2326;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .btn{
+    margin: 0.1rem;
+  }
+  
+  .btn-finish {
+    margin-top: 3rem;
+    margin-right: 0.3rem;
+  }
+
+  .btn-danger{
+    margin-left: 0.5rem;
+  }
+

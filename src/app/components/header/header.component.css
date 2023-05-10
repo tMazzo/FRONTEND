@@ -1,0 +1,188 @@
+* {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+}
+
+
+/* Estilos dependiendo la pos del navbar */
+.navbar-fixed-top{
+  background-color: #1e2326;
+  position: fixed;
+  z-index: 99;
+  top: 8px;
+  left: 18px;
+  right: 18px;
+  border-radius: 0; /* Anulado */
+  transition: all 0.2s ease-in-out;
+  border-radius: 20px;
+}
+
+.navbar-scroll{
+  background-color: #1e2326;
+  position: fixed;
+  z-index: 99;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  transition: all 0.2s ease-in-out;
+}
+
+
+/* Estilo para el logo */
+.navbar-brand img {
+  height: 55px;
+  width: auto;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.navbar-brand img:hover{
+  transform: scale(1.1);
+}
+
+/* Estilo para las opciones del navbar */
+.navbar-nav{
+  margin-right: 90px;
+}
+
+.navbar-nav .nav-link {
+  padding: 0 10px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: all 0.1s;
+}
+
+.navbar-nav .nav-link:hover{
+  color: #ffd900;
+  transform: scale(1.1);
+}
+
+/* Estilo para el botón de inicio de sesión */
+.login {
+  font-size: 17px;
+  position: relative;
+  color: #1e2326;
+  background: #ffff;
+  border: 2px solid white;
+  border-radius: 25px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.login:before{
+  content: "";
+  position: absolute;
+  background: #ffd900;
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.login:hover{
+  color: #fff;;
+}
+
+.login:before{
+  top: 100%;
+  left: 100%;
+  transition: 0.5s;
+}
+
+.login:hover:before{
+  top: -30px;
+  left: -30px;
+}
+
+.login:active:before{
+  background: #caac02;
+  transition: 0s;  
+}
+
+.offcanvas{
+  background-color: #1e2326;
+}
+/* Estilo para el modal del botón de inicio de sesión */
+.modal{
+  background: none repeat scroll;
+}
+
+.close{
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  padding: 0.25em 0.25em;
+  color: #fff;
+  border: 0;
+  border-radius: 0.375rem;
+  transition: all 0.1s;
+}
+
+.close:hover{
+ opacity: 0.5;
+}
+
+
+.btn-primary {
+  border-color: #ffd900;
+  background: #ffd900;
+  color: #1e2326;
+}
+
+.btn-primary:hover{
+  border-color: #fff;
+  background: #fff;
+  color: #1e2326;
+}
+
+.btn-primary:active{
+  border-color: #7a7a7a;
+  background-color: #fff;
+}
+
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body form label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+
+.modal-body form input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.modal-header h5 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 767px){
+  .primer{
+    display: none !important;
+  }
+
+  .navbar-nav{
+    margin-right: 10px;
+
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 0 15px;
+    font-size: 30px;
+  }
+
+  .login {
+    font-size: 25px;
+    margin: 20px;
+  }
+
+}

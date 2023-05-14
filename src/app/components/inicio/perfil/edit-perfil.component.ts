@@ -44,6 +44,13 @@ export class EditPerfilComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
+    this.perfil.imgP = this.imageService.url
+    if (this.imageService.url) {
+      this.perfil.imgP = this.imageService.url;
+    } else {
+      console.log("La URL de la imagen es inválida.");
+    }
+    
     this.sPerfilService.update(id, this.perfil).subscribe(
       data => {
         console.log(id);
@@ -85,9 +92,15 @@ export class EditPerfilComponent implements OnInit {
   }
 
   uploadImage($event: any): void {
-    this.imageService.uploadImage($event)
-
+    const id = this.activatedRouter.snapshot.params['id'];
+    const name = "perfil_" + id;
+    this.imageService.uploadImage($event, name)
+    // Establecer el valor del atributo 'value' en una cadena vacía.
+    const fileInput = $event.target as HTMLInputElement;
+    fileInput.setAttribute('value', '');
   }
+  
+
 
   // BORRAR DATOS
   delete(id?: number, event?: Event): void {

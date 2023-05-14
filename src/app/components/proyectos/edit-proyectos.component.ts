@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyecto';
+import { ImageService } from 'src/app/services/image.service';
 import { SProyectoService } from 'src/app/services/s-proyecto.service';
 
 @Component({
@@ -14,6 +15,7 @@ export class EditProyectosComponent implements OnInit {
   constructor(
     private sProyectoService: SProyectoService,
     private activatedRouter: ActivatedRoute,
+    public imageService: ImageService,
     private router: Router
     ) { }
 
@@ -45,5 +47,4 @@ export class EditProyectosComponent implements OnInit {
   cancelar(): void {
     this.router.navigateByUrl('/');
   }
-
 }

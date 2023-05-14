@@ -9,7 +9,7 @@ import { JwtDto } from '../model/jwt-dto';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://bkd-portfolio-web.onrender.com/auth/';
 
   constructor(private httpClient: HttpClient) { }
 

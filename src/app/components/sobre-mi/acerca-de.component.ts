@@ -31,4 +31,18 @@ export class AcercaDeComponent implements OnInit{
       err => console.log("No se pudo cargar el texto en sobre mí.")
     );
   }
-}
+    // BORRAR DATOS
+    delete(id?: number): void {
+      if (id != undefined) {
+        const index = this.sobreMi.findIndex(e => e.id === id);
+        this.sSobreMiService.delete(id).subscribe(
+          data => {
+            this.sobreMi.splice(index, 1);
+  
+          }, err => {
+            console.log("No se pudo borrar el sobre mi.");
+          }
+        );
+      }
+    }
+  }

@@ -15,6 +15,7 @@
   border-radius: 0; /* Anulado */
   transition: all 0.2s ease-in-out;
   border-radius: 20px;
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.349);    background-color: #1e2326;
 }
 
 .navbar-scroll{
@@ -104,6 +105,19 @@
 .offcanvas{
   background-color: #1e2326;
 }
+
+.offcanvas-footer {
+  color: #cecece;
+  text-align: center;
+
+}
+
+.offcanvas-footer p {
+  font-style: italic;
+  font-size: 14px;
+  padding: 4px;
+}
+
 /* Estilo para el modal del botón de inicio de sesión */
 .modal{
   background: none repeat scroll;
@@ -165,7 +179,7 @@
   font-size: 20px;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 790px){
   .primer{
     display: none !important;
   }
@@ -185,4 +199,10 @@
     margin: 20px;
   }
 
+}
+
+@media screen and (max-width: 767px){
+  .navbar{
+    margin-bottom: 100px;
+  }
 }

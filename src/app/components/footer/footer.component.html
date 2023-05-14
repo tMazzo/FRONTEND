@@ -2,13 +2,12 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-sm-6">
+        <div class="col-sm-6" *ngFor="let Contacto of contacto" >
 
             <h4>Contacto</h4>
             <ul>
-                <li><i class="fa fa-envelope"></i>  mazzotomas3@gmail.com</li>
-                <li><i class="fa fa-phone"></i> +54 9 11 3170-6245</li>
-                <li><i class="fa fa-map-marker"></i>  www.estaweb.com</li>
+                <li><i class="fa fa-envelope"></i> {{Contacto.emailC}}</li>
+                <li><i class="fa fa-phone"></i> {{Contacto.telefonoC}}</li>
             </ul>
 
             <div class="social">
@@ -36,6 +35,7 @@
             </div>
         </div>
         
+        <!-- PARA EL FUTURO -->
         <div class="col-sm-6">
           <h4>Envíame un mensaje</h4>
 

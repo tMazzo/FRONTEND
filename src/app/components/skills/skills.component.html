@@ -1,9 +1,9 @@
 <h2>Conocimientos</h2>
 
 <div class="buttons">
-    <button class="indice" (click)="showContent(1)">Programación</button>
-    <button class="indice" (click)="showContent(2)">Diseño</button>
-    <button class="indice" (click)="showContent(3)">Office</button>
+    <button class="indice"  [class.active]="activeButton === 1" (click)="showContent(1)">Programación</button>
+    <button class="indice" [class.active]="activeButton === 2" (click)="showContent(2)">Diseño</button>
+    <button class="indice" [class.active]="activeButton === 3" (click)="showContent(3)">Office</button>
 </div>
 <div class="content" [@fadeInOut]="show ? 'in' : 'out'">
 

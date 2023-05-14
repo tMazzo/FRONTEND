@@ -81,6 +81,10 @@
 
 
   </div>
+  <div class="offcanvas-footer">
+    <p>Este Sistema de "Iniciar Sesión" solamente es para poder editar mi Portafolio, por lo tanto solo se tiene acceso con una cuenta de administrador.</p>
+  </div>
+
   <div *ngIf="isLogged" class="offcanvas-body">
     <label for="nombreUsuario" class="form-label">Sesión iniciada correctamente!</label>
     <button class="btn btn-danger w-100 mb-3 text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar" (click)="onLogOut()">Cerrar sesión</button>

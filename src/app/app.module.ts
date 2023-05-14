@@ -41,6 +41,10 @@ import { EditSkillsTresComponent } from './components/skills/office/edit-skills-
 import { NewSkillsTresComponent } from './components/skills/office/new-skills-tres.component';
 import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
 import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
+import { NewAcercaDeComponent } from './components/sobre-mi/edit-acerca-de/new-acerca-de.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -69,6 +73,7 @@ import { NewProyectosComponent } from './components/proyectos/new-proyectos.comp
     NewSkillsTresComponent,
     EditProyectosComponent,
     NewProyectosComponent,
+    NewAcercaDeComponent,
 
   ],
   imports: [
@@ -78,7 +83,9 @@ import { NewProyectosComponent } from './components/proyectos/new-proyectos.comp
     BrowserAnimationsModule,
     HttpClientModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     ImportScriptService,

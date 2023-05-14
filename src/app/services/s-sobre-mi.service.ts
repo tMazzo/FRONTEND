@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SobreMi } from '../model/sobre-mi';
-import { environment } from 'src/environments/environments';
+import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Perfil } from 'src/app/model/perfil';
 import { Titulo } from 'src/app/model/titulo';
 import { Contacto } from 'src/app/model/contacto';
@@ -17,6 +18,9 @@ export class InicioComponent implements OnInit {
   contacto: Contacto[] = [];  
   titulo: Titulo[] = [];
   isLogged = false;
+
+  // CV
+  pdfSrc: string = 'assets/cv.pdf';
 
   constructor(
     private sPerfil: SPerfilService,
@@ -56,6 +60,17 @@ export class InicioComponent implements OnInit {
       },
       err => console.log("No se pudo cargar el titulo.")
     );
+  }
+
+  // CV
+  descargarPdf() {
+    const link = document.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', this.pdfSrc);
+    link.setAttribute('download', 'mi-cv.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
 }

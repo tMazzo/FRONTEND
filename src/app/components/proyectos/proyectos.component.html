@@ -11,7 +11,9 @@
         <div class="card  mb-3" 
           [ngClass]="{ 'active': i === currentCard }" 
           [attr.data-card-index]="i">
+          <!--
           <div class="card-img" [style.background-image]="'url(' + p.imgP + ')'"></div>
+          -->
           <h2>{{ p.nombreP }}</h2>
 
           <div *ngIf="isLogged">

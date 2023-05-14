@@ -16,6 +16,7 @@ import { NewSkillsTresComponent } from './components/skills/office/new-skills-tr
 import { EditSkillsTresComponent } from './components/skills/office/edit-skills-tres.component';
 import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
 import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
+import { NewAcercaDeComponent } from './components/sobre-mi/edit-acerca-de/new-acerca-de.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'editperfil/:id', component: EditPerfilComponent},
   {path: 'editcontacto/:id', component: EditContactoComponent},
   {path: 'editsobremi/:id', component: EditAcercaDeComponent},
+  {path: 'nuevosobremi', component: NewAcercaDeComponent},
   {path: 'nuevaskill', component: NewSkillsComponent},
   {path: 'editskill/:id', component: EditSkillsComponent},
   {path: 'nuevaskillDos', component: NewSkillsDosComponent},

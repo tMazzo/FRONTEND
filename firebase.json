@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/portafolio-proyecto-integrador-tomas-mazzo",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

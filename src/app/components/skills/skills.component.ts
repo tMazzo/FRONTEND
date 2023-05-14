@@ -116,10 +116,13 @@ export class SkillsComponent implements OnInit {
 
 
   content = 1;
+  activeButton = 1;
   show = true;
 
   showContent(num: number) {
     this.content = num;
+    this.activeButton = num;
   }
+
 
 }

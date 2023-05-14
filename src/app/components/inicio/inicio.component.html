@@ -4,7 +4,7 @@
         <div class="columna"  *ngFor="let Perfil of perfil" >
             <div class="cards card-one">
                 <div class="Informacion">
-                    <img src="../../../assets/images/fotoPerfil.jpg" class="img-fluid">
+                    <img src="{{Perfil.imgP}}" class="img-fluid" id="imgP">
                     <h6> {{Perfil.nombreP}} {{Perfil.apellidoP}}</h6>
                     <p id="arroba">@{{Perfil.apodoP}}</p>
                 </div>
@@ -56,12 +56,13 @@
                         </li>
                         <li>
                             <strong>Website</strong>
-                            <a href=" " class="enlace">www.estaweb.com</a>
+                            <a href=" " class="enlace">frd-portfolio.web.app</a>
 
                         </li>
                     </ul>
                 </div>
-                <button>
+                
+                <button (click)="descargarPdf()">
                     Descargar CV <i class="fa-solid fa-download"></i> 
                     <span class="overlay"></span>
                 </button>

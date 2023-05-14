@@ -1,11 +1,15 @@
 <section id="acercaDe" class="acercaDe">
-    <div class="col" *ngFor="let sm of sobreMi">
+    <div class="col">
         <div class="contenido-acercaDe">
-            <h2>Sobre mí</h2>
-            <p>¡Hola! <span>Mi nombre es Tomás</span>, {{sm.textoSM}} </p>
+            <h2>Sobre mi</h2>
+            <p>¡Hola! <span>Mi nombre es Tomás.</span></p>
+            <div  *ngFor="let sm of sobreMi">
+                <p>{{sm.textoSM}}</p>
+                <button *ngIf="isLogged" class="btn btn-light" routerLink="/editsobremi/{{sm.id}}"><i class="fa-solid fa-pen-to-square"></i> EDITAR</button>
+
+                <button *ngIf="isLogged" class="btn btn-danger" (click)="delete(sm.id)"><i class="fa-solid fa-trash fa-sm"></i> BORRAR</button>
+            </div>
         </div>
-        <button *ngIf="isLogged" class="btn btn-light" routerLink="/editsobremi/{{sm.id}}"><i class="fa-solid fa-pen-to-square"></i> EDITAR TEXTO</button>
-
     </div>
-
+    <button type="button" class="btn btn-light" routerLink="/nuevosobremi" *ngIf="isLogged">Agregar texto</button>
 </section>

@@ -24,6 +24,11 @@ h2{
     transform: translateY(-2px);
 }
 
+.active{
+    background-color: #252A2E;
+    transform: translateY(-2px); 
+}
+
 .buttons{
 text-align: center;
 }

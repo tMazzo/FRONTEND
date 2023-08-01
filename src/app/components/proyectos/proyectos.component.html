@@ -1,8 +1,8 @@
+<!-- 
 <section id="portafolio" class="fondo">
   <h1>Proyectos</h1>
   <p class="desc">Este es un espacio donde muestro los proyectos en los que participé, mis proyectos realizados y los que se encuentran en progreso.</p>
 
-  <!-- MOSTRAR CARD -->
   <div class="container">
     <hr> 
     <div class="row">
@@ -11,11 +11,10 @@
         <div class="card  mb-3" 
           [ngClass]="{ 'active': i === currentCard }" 
           [attr.data-card-index]="i">
-          <!--
-          <div class="card-img" [style.background-image]="'url(' + p.imgP + ')'"></div>
-          -->
-          <h2>{{ p.nombreP }}</h2>
 
+          <hr>
+          <h2>{{ p.nombreP }}</h2>
+          
           <div *ngIf="isLogged">
             <button class="btn btn-light" routerLink="/editproyecto/{{p.id}}">
               <i class="fa-solid fa-pen-to-square"></i>
@@ -30,7 +29,6 @@
        
   </div>
 
-  <!-- MOSTRAR CONTENIDO DE LA CARD -->
   <div class="card-info" *ngIf="currentCard >= 0">
     <p>{{ proyecto[currentCard].descripcionP }}</p>
   </div>
@@ -40,4 +38,5 @@
 
   <button type="button" class="btn btn-light" routerLink="/nuevoproyecto" *ngIf="isLogged">Agregar proyecto</button>
 </div>
-</section>
+</section> 
+-->

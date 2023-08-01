@@ -31,6 +31,8 @@ footer {
   .row {
     display: flex;
     justify-content: space-between;
+    text-align: center;
+    align-items: center;
   }
   
   .col-sm-6 {
